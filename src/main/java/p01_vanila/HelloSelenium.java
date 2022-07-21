@@ -9,7 +9,7 @@ public class HelloSelenium {
 //        WebDriverManager.edgedriver().setup();
 //        WebDriver driver = new EdgeDriver();
 
-        System.setProperty("webdriver.chrome.driver",System.getProperty("user.home")+"/tools/webdrivers/chromedriver");
+        System.setProperty("webdriver.chrome.driver",System.getProperty("user.home")+"/tools/webdrivers/chromedriver.exe");
         System.setProperty("webdriver.chrome.whitelistedIps", "");
         WebDriver driver = new ChromeDriver();
 

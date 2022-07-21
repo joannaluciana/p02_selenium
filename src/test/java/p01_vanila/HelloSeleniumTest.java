@@ -13,7 +13,7 @@ class HelloSeleniumTest {
 
     @BeforeAll
     public static void warmup() {
-        System.setProperty("webdriver.chrome.driver", System.getProperty("user.home") + "/tools/webdrivers/chromedriver");
+        System.setProperty("webdriver.chrome.driver", System.getProperty("user.home") + "/tools/webdrivers/chromedriver.exe");
         System.setProperty("webdriver.chrome.whitelistedIps", "");
         driver = new ChromeDriver();
     }
