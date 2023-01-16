@@ -40,11 +40,22 @@ public void submitForm() {
 
         driver.findElement(SELECTOR_LOGIN_BUTTON).submit();
 }
-public boolean isPasswordInccorectMessageDisplayed() {
+public boolean isPasswordIncorrectMessageDisplayed() {
     WebElement flash = driver.findElement(SELECTOR_FLASH);
 
     String flashText = flash.getText();
-    return flash.isDisplayed() && flashText.toLowerCase().contains("Your password is invalid!".toLowerCase());
+    return flash.isDisplayed() &&
+            flashText
+                    .toLowerCase()
+                    .contains("Your password is invalid!".toLowerCase());
+}
+
+public boolean isUserIncorrectMsgDisplay() {
+        WebElement flash = driver.findElement(SELECTOR_FLASH);
+        String flashText = flash.getText();
+        return flash.isDisplayed() &&
+                flashText.toLowerCase()
+                        .contains("Your username is invalid!".toLowerCase());
 }
 
     }
