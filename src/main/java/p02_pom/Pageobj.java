@@ -13,6 +13,9 @@ public class Pageobj {
     static final String CORRECT_USERNAME = "tomsmith";
     static final String CORRECT_PASSWORD = "SuperSecretPassword";
 
+    static final String INCORRECT_USERNAME = "ffddff";
+    static final String INCORRECT_PASSWORD = "Sdfdfdfdf";
+
     private static final By SELECTOR_LOGIN_BUTTON = By.cssSelector("#login > button");
     private static final By SELECTOR_USER_NAME_INPUT= By.id("username");
     private static final By SELECTOR_PASSWORD_INPUT= By.id("password");
@@ -35,6 +38,14 @@ public Pageobjsecure loginWithCorrectCredentials() {
 
     return new Pageobjsecure(driver, false);
 }
+
+    public void loginWithInCorrectCredentials() {
+        driver.findElement(SELECTOR_LOGIN_BUTTON).sendKeys(INCORRECT_USERNAME);
+        driver.findElement(SELECTOR_PASSWORD_INPUT).sendKeys(INCORRECT_PASSWORD);
+
+        submitForm();
+
+    }
 
 public void submitForm() {
 
